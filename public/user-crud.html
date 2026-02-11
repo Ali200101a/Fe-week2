@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User CRUD Test</title>
+</head>
+<body>
+  <!-- عنوان الصفحة -->
+  <h1>User Management</h1>
+  <p>Open browser console (F12) to see debug info</p>
+  
+  <!-- قسم إضافة مستخدم جديد -->
+  <h2>Add New User</h2>
+  <!-- نموذج إضافة مستخدم -->
+  <form id="add-user-form">
+    <!-- حقل اسم المستخدم - 3 أحرف على الأقل -->
+    <input type="text" id="username" placeholder="Username (min 3 chars)" minlength="3" maxlength="20" required>
+    <!-- حقل البريد الإلكتروني -->
+    <input type="email" id="email" placeholder="Email" required>
+    <!-- حقل كلمة المرور - 8 أحرف على الأقل -->
+    <input type="password" id="password" placeholder="Password (min 8 chars)" minlength="8" required>
+    <!-- زر الإرسال -->
+    <button type="submit">Add User</button>
+  </form>
+
+  <!-- قسم عرض المستخدمين -->
+  <h2>Users</h2>
+  <!-- زر لتحميل قائمة المستخدمين -->
+  <button id="load-users">Load Users</button>
+  <!-- مكان عرض قائمة المستخدمين -->
+  <div id="user-list"></div>
+  
+  <!-- تحميل ملف JavaScript -->
+  <script type="module" src="/src/user-crud.js"></script>
+</body>
+</html>

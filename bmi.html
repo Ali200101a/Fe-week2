@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BMI Calculator - HyteGym</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="bmi.html">BMI Calculator</a>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1>BMI Calculator</h1>
+      <p>Calculate your Body Mass Index</p>
+    </header>
+
+    <!-- Main content -->
+    <main class="container">
+      <section class="bmi-page">
+        <div class="bmi-card">
+          <h2>Painoindeksilaskuri / BMI-laskuri</h2>
+          <p class="bmi-description">Painoindeksilaskurilla voit laskea pituuden ja painon perusteella painoindeksin (BMI, Body Mass Index).</p>
+
+          <label for="weight">Anna painosi:</label>
+          <input id="weight" type="number" placeholder="kg" />
+
+          <label for="height">Anna pituutesi:</label>
+          <input id="height" type="number" placeholder="cm" />
+
+          <button id="calcBtn">Laske indeksi</button>
+
+          <!-- BMI Visual Guide Image -->
+          <div class="bmi-image-container">
+            <img src="/images/bmi.jpeg" alt="BMI Categories Visual Guide" class="bmi-image">
+          </div>
+
+          <div id="result-container" style="display: none;">
+            <p class="result-label">Mittaustulokset: <span id="result-value">0</span></p>
+            
+            <table class="bmi-table">
+              <tr>
+                <td class="category-name">Alipaino</td>
+                <td class="category-range">0 - 18.9</td>
+              </tr>
+              <tr>
+                <td class="category-name">Normaali paino</td>
+                <td class="category-range">19 - 24.9</td>
+              </tr>
+              <tr>
+                <td class="category-name">Ylipaino</td>
+                <td class="category-range">25.0 - 40.0 tai enemmän</td>
+              </tr>
+            </table>
+
+            <p class="analysis-note">⚠️ Analyysi: Tähän saat analyysin BMI tuloksestasi</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © FE Week 2
+    </footer>
+
+    <script type="module" src="/src/bmi.js"></script>
+  </body>
+</html>

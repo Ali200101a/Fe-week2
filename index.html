@@ -3,50 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <title>FE Week 2</title>
+    <!-- تحميل ملف التنسيق -->
     <link rel="stylesheet" href="/src/style.css" />
   </head>
 
   <body>
-    <!-- Navigation -->
+    <!-- شريط التنقل -->
     <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#bmi">BMI Calculator</a>
+      <a href="index.html">Home</a>
+      <a href="bmi.html">BMI Calculator</a>
+      <a href="user-crud.html">User Management</a>
     </nav>
 
-    <!-- Hero / Banner -->
-    <header class="hero" id="home">
+    <!-- قسم الترحيب الرئيسي - صورة كاملة -->
+    <header class="hero-fullscreen" id="home">
       <div class="hero-content">
-        <h1>HyteGym</h1>
+        <h1>Welcome</h1>
         <p>Simple tools to follow your wellbeing and keep things on track.</p>
-        <a href="#bmi" class="hero-btn">Go to BMI</a>
+        <a href="bmi.html" class="hero-btn">Go to BMI</a>
       </div>
     </header>
 
-    <!-- Main content -->
-    <main class="container">
-      <section>
-        <h2>Welcome</h2>
-        <p>This project is made for Week 2 practice.</p>
-      </section>
-
-      <section id="bmi" class="bmi">
-        <h2>BMI Calculator</h2>
-
-        <label for="height">Height (cm)</label>
-        <input id="height" type="number" placeholder="e.g. 180" />
-
-        <label for="weight">Weight (kg)</label>
-        <input id="weight" type="number" placeholder="e.g. 75" />
-
-        <button id="calcBtn">Calculate</button>
-        <p id="result"></p>
-      </section>
-    </main>
-
-    <footer>
-      © FE Week 2
-    </footer>
-
+    <!-- تحميل ملف JavaScript الرئيسي -->
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

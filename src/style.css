@@ -10,11 +10,16 @@ body {
 }
 
 /* NAV */
+/* شريط التنقل - شفاف فوق الصورة */
 .navbar {
   display: flex;
   gap: 20px;
   padding: 16px;
-  background-color: #1a1a1a;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10;
 }
 
 .navbar a {
@@ -23,14 +28,27 @@ body {
 }
 
 /* HERO */
+/* قسم الترحيب الرئيسي مع صورة الخلفية */
 .hero {
   height: 70vh;
-  background-image: url("/images/hero.jpg");
+  background-image: url("/images/gym.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 30%;
   display: flex;
   align-items: center;
   padding: 2rem;
+}
+
+/* صفحة رئيسية بصورة كاملة */
+.hero-fullscreen {
+  height: 100vh;
+  background-image: url("/images/gym.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 100px 3rem 2rem 3rem;
 }
 
 .hero-content {
@@ -56,6 +74,17 @@ body {
 /* CONTENT */
 .container {
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 300px);
+}
+
+.bmi-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bmi input {
@@ -65,10 +94,180 @@ body {
   width: 200px;
 }
 
-button {
-  padding: 8px 16px;
-  cursor: pointer;
+/* PAGE HEADER */
+.page-header {
+  background: linear-gradient(135deg, #646cff 0%, #8b7cff 100%);
+  padding: 2rem;
+  text-align: center;
 }
+
+.page-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.page-header p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* BMI PAGE */
+.bmi-card {
+  background-color: #1a1a1a;
+  border: 1px solid #646cff;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.bmi-card h2 {
+  margin-top: 0;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.bmi-description {
+  color: #999;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.bmi-card label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.bmi-card input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #646cff;
+  background-color: #242424;
+  color: #fff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.bmi-card input::placeholder {
+  color: #666;
+}
+
+.bmi-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a1a1a;
+  color: white;
+  border: 2px solid #666;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 2rem;
+}
+
+.bmi-card button:hover {
+  border-color: #646cff;
+  background-color: #242424;
+}
+
+/* BMI Image Container */
+.bmi-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #242424;
+  border-radius: 8px;
+  border: 1px solid #444;
+}
+
+.bmi-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* BMI Categories Visual */
+.bmi-categories-visual {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-badge {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  min-width: 90px;
+}
+
+/* Result Section */
+#result-container {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #666;
+}
+
+.result-label {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#result-value {
+  color: #646cff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.bmi-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.bmi-table tr {
+  border-bottom: 1px solid #444;
+}
+
+.bmi-table tr:last-child {
+  border-bottom: none;
+}
+
+.category-name {
+  padding: 12px 8px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.category-range {
+  padding: 12px 8px;
+  text-align: right;
+  color: #999;
+}
+
+.analysis-note {
+  background-color: #2a2a2a;
+  padding: 12px;
+  border-radius: 4px;
+  color: #f39c12;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
 
 /* FOOTER */
 footer {
