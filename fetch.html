@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch API</title>
+
+    <!-- تحميل ملف التنسيق -->
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+
+  <body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="bmi.html">BMI Calculator</a>
+      <a href="fetch.html">Fetch API</a>
+      <a href="user-crud.html">User Management</a>
+    </nav>
+
+    <main class="page">
+      <section class="card">
+        <h1>Fetch API</h1>
+        <p>Test backend endpoints using fetch (GET, POST, PUT, DELETE).</p>
+
+        <div class="actions">
+          <button id="btn-get-all" class="btn">Get All Items</button>
+          <button id="btn-clear" class="btn btn-ghost">Clear List</button>
+        </div>
+
+        <div id="toast" class="toast" aria-live="polite"></div>
+      </section>
+
+      <!-- قائمة العناصر -->
+      <section class="card">
+        <h2>Items</h2>
+        <div id="items-list" class="list"></div>
+      </section>
+
+      <!-- GET / DELETE by id -->
+      <section class="card">
+        <h2>Get / Delete item by id</h2>
+
+        <div class="grid">
+          <form id="get-by-id-form" class="form">
+            <label>
+              Item id
+              <input id="get-id" type="number" placeholder="e.g. 1" required />
+            </label>
+            <button class="btn" type="submit">Get Item</button>
+          </form>
+
+          <form id="delete-by-id-form" class="form">
+            <label>
+              Item id
+              <input id="delete-id" type="number" placeholder="e.g. 1" required />
+            </label>
+            <button class="btn btn-danger" type="submit">Delete Item</button>
+          </form>
+        </div>
+
+        <pre id="single-item" class="codebox"></pre>
+      </section>
+
+      <!-- POST -->
+      <section class="card">
+        <h2>Add new item (POST)</h2>
+
+        <form id="add-form" class="form wide">
+          <div class="row">
+            <label>
+              Name
+              <input id="add-name" type="text" placeholder="Mandarin" required />
+            </label>
+
+            <label>
+              Weight
+              <input id="add-weight" type="number" placeholder="80" required />
+            </label>
+          </div>
+
+          <button class="btn" type="submit">Add Item</button>
+        </form>
+      </section>
+
+      <!-- PUT -->
+      <section class="card">
+        <h2>Update item (PUT)</h2>
+
+        <form id="update-form" class="form wide">
+          <div class="row">
+            <label>
+              Item id
+              <input id="update-id" type="number" placeholder="e.g. 1" required />
+            </label>
+
+            <label>
+              New name
+              <input id="update-name" type="text" placeholder="New name" required />
+            </label>
+
+            <label>
+              New weight
+              <input id="update-weight" type="number" placeholder="50" required />
+            </label>
+          </div>
+
+          <button class="btn" type="submit">Update Item</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- تحميل ملف الجافاسكربت -->
+    <script type="module" src="/src/fetch.js"></script>
+  </body>
+</html>
