@@ -4,12 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User CRUD Test</title>
-  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="fetch.html">Fetch API</a>
+    <a href="user-crud.html">User Management</a>
+    <a href="entries.html">Diary</a>
+  </nav>
+
+  <main class="container">
   <h1>User Management</h1>
   <button id="load-users">Load Users</button>
   <div id="user-list"></div>
-  <script src="src/user-crud.js"></script>
+  </main>
+
+  <script type="module" src="/src/user-crud.js"></script>
 </body>
 </html>

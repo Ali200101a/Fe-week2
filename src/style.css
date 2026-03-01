@@ -7,6 +7,7 @@
 
 body {
   margin: 0;
+  padding-top: 64px;
 }
 
 /* NAV */
@@ -16,7 +17,9 @@ body {
   gap: 20px;
   padding: 16px;
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   box-sizing: border-box;
   z-index: 10;
@@ -305,4 +308,54 @@ footer {
   .hero h1 {
     font-size: 1.8rem;
   }
+}
+.container {
+  padding: 40px 24px;
+}
+
+#cards-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.entry-card {
+  width: 260px;
+  padding: 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.entry-date {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.entry-notes {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+dialog {
+  border: 0;
+  border-radius: 12px;
+  padding: 18px;
+  width: 320px;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#login-form input {
+  padding: 10px;
 }

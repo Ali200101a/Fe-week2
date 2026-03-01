@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diary</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="fetch.html">Fetch API</a>
+    <a href="user-crud.html">User Management</a>
+    <a href="entries.html">Diary</a>
+  </nav>
+
+  <main class="container">
+    <h1>Diary Entries</h1>
+
+    <button id="login-btn">Login</button>
+
+    <div id="cards-container"></div>
+
+    <!-- Modal -->
+    <dialog id="login-dialog">
+      <form method="dialog" id="login-form">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+        <button type="button" id="close-dialog">Cancel</button>
+      </form>
+    </dialog>
+
+  </main>
+
+  <script type="module" src="/src/entries.js"></script>
+
+</body>
+</html>
