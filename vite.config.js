@@ -10,7 +10,7 @@ export default defineConfig({
       // كل الطلبات التي تبدأ بـ /api
       '/api': {
         // توجيهها إلى سيرفر الـ backend
-        target: 'http://localhost:3000',
+        target: 'http://127.0.0.1:3000',
         // تغيير الأصل لتجنب مشاكل CORS
         changeOrigin: true
       }

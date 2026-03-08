@@ -16,9 +16,36 @@
   </nav>
 
   <main class="container">
-  <h1>User Management</h1>
-  <button id="load-users">Load Users</button>
-  <div id="user-list"></div>
+    <section class="user-crud-page">
+      <header class="user-crud-header">
+        <h1>User Management</h1>
+        <p>Add users, then load and manage the list.</p>
+      </header>
+
+      <section class="user-card">
+        <h2>Create User</h2>
+        <form id="add-user-form" class="user-form">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" placeholder="Enter username" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Enter email" required />
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Enter password" required />
+
+          <button type="submit" class="btn-primary">Add User</button>
+        </form>
+      </section>
+
+      <section class="user-card">
+        <div class="user-list-toolbar">
+          <h2>Users</h2>
+          <button id="load-users" class="btn-secondary">Load Users</button>
+        </div>
+        <div id="user-list"></div>
+      </section>
+    </section>
   </main>
 
   <script type="module" src="/src/user-crud.js"></script>
